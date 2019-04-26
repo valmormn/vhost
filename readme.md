@@ -4,7 +4,7 @@ Script para automatizar a gestão de hosts virtuais no servidor apache.
 
 
 ```Bash
-$ vhost [DocumentRoot] [ServerName]
+$ vhost {{DocumentRoot}} {{ServerName}}
 ```
 
 O comando `vhost` edita os arquivos necessários e reinicia o servidor apache.
