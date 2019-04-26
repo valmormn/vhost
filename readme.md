@@ -2,22 +2,22 @@
 
 Script para automatizar a gestão de hosts virtuais no servidor apache.
 
+
 ```Bash
 $ vhost [DocumentRoot] [ServerName]
 ```
+
+O comando `vhost` edita os arquivos necessários e reinicia o servidor apache.
 
 Editar o arquivo `httpd-vhosts.conf` 
 
 ```Apache
 <VirtualHost {{ServerName}}:80>
     DocumentRoot "{{DocumentRoot}}"
-    #DocumentRoot "/Users/v/Documents/Code/lang/js/web-graphics"
     ServerName {{ServerName}}
     ErrorLog "/usr/local/var/log/httpd/{{ServerName}}-error_log"
     CustomLog "/usr/local/var/log/httpd/{{ServerName}}-access_log" combined
-    #<Directory "'/Users/v/Documents/Code/lang/js/valmor.net.br">
     <Directory "{{DocumentRoot}}">
-
         Require all granted
     </Directory>
 </VirtualHost>
@@ -25,7 +25,7 @@ Editar o arquivo `httpd-vhosts.conf`
 
 Editar o arquivo `/etc/hosts`
 
-```Bash
+```Apache
 #
 # Host Database
 #
@@ -40,3 +40,6 @@ Editar o arquivo `/etc/hosts`
 255.255.255.255	broadcasthost
 ::1             localhost
 ```
+
+## Referências
+
