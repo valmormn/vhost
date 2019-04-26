@@ -41,5 +41,17 @@ Editar o arquivo `/etc/hosts`
 ::1             localhost
 ```
 
+## Adicionar vhost
+
+
+## Alterar ServerName
+
+
+## Excluir vhost
+
+
+```Bash
+$ vhost -rm {{ServerName}}
+```
 ## Referências
 
