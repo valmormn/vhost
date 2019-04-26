@@ -1,0 +1,21 @@
+{
+  "name": "vhost",
+  "version": "1.0.0",
+  "description": "Script para automatizar a gestão de hosts virtuais no servidor apache.",
+  "main": "vhost.js",
+  "scripts": {
+    "push": "git add . && git commit -am \"vhost\" && git push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valmormn/vhost.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valmormn/vhost/issues"
+  },
+  "homepage": "https://github.com/valmormn/vhost#readme"
+}
