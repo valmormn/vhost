@@ -2,6 +2,7 @@
 
 import os
 import sys
+import time
 import platform
 import subprocess
 from threading import Thread
@@ -21,7 +22,16 @@ txt = """
 </VirtualHost>
 """
 
+def timeItTook(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        end = time.time()
+        print(func.__name__ + " took " + str((end-start)*1000) + " mil sec")
+        return result
+    return wrapper
 
+@timeItTook
 def writeVHost():
     f = open("demofile2.txt", "a")
     f.write(txt)
