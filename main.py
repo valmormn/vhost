@@ -2,13 +2,13 @@
 
 import os
 import sys
+import platform
 import subprocess
 from threading import Thread
 
 # import src
 
 
-# txt = "<VirtualHost {{ServerName}}:80>\n"
 txt = """
 <VirtualHost {{ServerName}}:80>
     DocumentRoot \"{{DocumentRoot}}\"
@@ -20,27 +20,30 @@ txt = """
     </Directory>
 </VirtualHost>
 """
-# os.system("echo " + txt)
+
 
 def writeVHost():
-	f = open("demofile2.txt", "a")
-	f.write(txt)
-	f.close()
-	pass
+    f = open("demofile2.txt", "a")
+    f.write(txt)
+    f.close()
+    pass
+
 
 def main():
     # Thread(target = serve).start()
     Thread(target = writeVHost).start()
-
+    print(os)
+    print(platform.system())
+    os.system('apachectl -V | grep SERVER_CONFIG_FILE')
     pass
 
-if __name__ == '__main__': 
+
+if __name__ == '__main__':
     main()
     # print('This program is being run by itself')
     # print(parameter)
     # print(app)
     # doit('fuck')
-    
 else:
     main()
     print('I am being imported from another module')
