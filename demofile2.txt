@@ -68,3 +68,63 @@
         Require all granted
     </Directory>
 </VirtualHost>
+
+<VirtualHost {{ServerName}}:80>
+    DocumentRoot "{{DocumentRoot}}"
+    ServerName {{ServerName}}
+    ErrorLog "/usr/local/var/log/httpd/{{ServerName}}-error_log"
+    CustomLog "/usr/local/var/log/httpd/{{ServerName}}-access_log" combined
+    <Directory "{{DocumentRoot}}">
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+<VirtualHost {{ServerName}}:80>
+    DocumentRoot "{{DocumentRoot}}"
+    ServerName {{ServerName}}
+    ErrorLog "/usr/local/var/log/httpd/{{ServerName}}-error_log"
+    CustomLog "/usr/local/var/log/httpd/{{ServerName}}-access_log" combined
+    <Directory "{{DocumentRoot}}">
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+<VirtualHost {{ServerName}}:80>
+    DocumentRoot "{{DocumentRoot}}"
+    ServerName {{ServerName}}
+    ErrorLog "/usr/local/var/log/httpd/{{ServerName}}-error_log"
+    CustomLog "/usr/local/var/log/httpd/{{ServerName}}-access_log" combined
+    <Directory "{{DocumentRoot}}">
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+<VirtualHost {{ServerName}}:80>
+    DocumentRoot "{{DocumentRoot}}"
+    ServerName {{ServerName}}
+    ErrorLog "/usr/local/var/log/httpd/{{ServerName}}-error_log"
+    CustomLog "/usr/local/var/log/httpd/{{ServerName}}-access_log" combined
+    <Directory "{{DocumentRoot}}">
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+<VirtualHost {{ServerName}}:80>
+    DocumentRoot "{{DocumentRoot}}"
+    ServerName {{ServerName}}
+    ErrorLog "/usr/local/var/log/httpd/{{ServerName}}-error_log"
+    CustomLog "/usr/local/var/log/httpd/{{ServerName}}-access_log" combined
+    <Directory "{{DocumentRoot}}">
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+<VirtualHost {{ServerName}}:80>
+    DocumentRoot "{{DocumentRoot}}"
+    ServerName {{ServerName}}
+    ErrorLog "/usr/local/var/log/httpd/{{ServerName}}-error_log"
+    CustomLog "/usr/local/var/log/httpd/{{ServerName}}-access_log" combined
+    <Directory "{{DocumentRoot}}">
+        Require all granted
+    </Directory>
+</VirtualHost>

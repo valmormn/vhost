@@ -10,18 +10,7 @@ from threading import Thread
 # import src
 
 
-txt = """
-<VirtualHost {{ServerName}}:80>
-    DocumentRoot \"{{DocumentRoot}}\"
-    ServerName {{ServerName}}
-    ErrorLog \"/usr/local/var/log/httpd/{{ServerName}}-error_log\"
-    CustomLog \"/usr/local/var/log/httpd/{{ServerName}}-access_log\" combined
-    <Directory \"{{DocumentRoot}}\">
-        Require all granted
-    </Directory>
-</VirtualHost>
-"""
-
+# time it takes to run a function
 def timeItTook(func):
     def wrapper(*args, **kwargs):
         start = time.time()
@@ -38,11 +27,32 @@ def writeVHost():
     f.close()
     pass
 
+txt = """
+<VirtualHost {{ServerName}}:80>
+    DocumentRoot \"{{DocumentRoot}}\"
+    ServerName {{ServerName}}
+    ErrorLog \"/usr/local/var/log/httpd/{{ServerName}}-error_log\"
+    CustomLog \"/usr/local/var/log/httpd/{{ServerName}}-access_log\" combined
+    <Directory \"{{DocumentRoot}}\">
+        Require all granted
+    </Directory>
+</VirtualHost>
+"""
+
+class MadFunction:
+    def __init__(self, *args, **kwargs):
+        self.id = "init"
+
+    def __repr__(self):
+        return 'MadFunction(*{!r})'.format(self.coeffs)
+
+    def __add__(self, other):
+        pass
 
 def main():
     # Thread(target = serve).start()
     Thread(target = writeVHost).start()
-    print(os)
+    print(__name__)
     print(platform.system())
     os.system('apachectl -V | grep SERVER_CONFIG_FILE')
     pass
