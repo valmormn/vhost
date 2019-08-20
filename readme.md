@@ -6,6 +6,7 @@
 Vhost precisa editar dois arquivos para poder acessar uma pasta local com um dominio do tipo `v1` .
 
 `/etc/hosts`
+
 `/etc/apache2/sites-enabled/{{ServerName}}.conf`
 
 ---
