@@ -1,19 +1,12 @@
 # vhost
 
-É possível fazer o servidor Apache hospedar diferentes sites em um mesmo IP. Para isso é preciso configurar um Virtual Host. Vhost é um script voltado para automatizar a gestão de hosts virtuais no servidor apache.
-
-
-Vhost precisa editar dois arquivos para poder acessar uma pasta local com um dominio do tipo `v1` .
-
-`/etc/hosts`
-`/etc/apache2/sites-enabled/{{ServerName}}.conf`
-
----
-
+Script para automatizar a gestão de hosts virtuais no servidor apache.
 O comando `vhost` edita os arquivos necessários e reinicia o servidor apache.
 
+
+
 ```Bash
-🐧 vhost {{DocumentRoot}} {{ServerName}} {{Port}}
+$ vhost {{DocumentRoot}} {{ServerName}} {{Port}}
 ```
 
 DocumentRoot - Caminho da pasta que será servida
